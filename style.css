@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --brightorange: hsl(31, 77%, 52%);
+    --darkcyan: hsl(184, 100%, 22%);
+    --verydark: hsl(179, 100%, 13%);
+    --transparentwhite: hsla(0, 0%, 100%, 0.75);
+    --verylightgray: hsl(0, 0%, 95%);
+    --fontbig: 'Big Shoulders Display', cursive;
+    --fontlexend: 'Lexend Deca', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+section h1 {
+    font-family: var(--fontbig);
+    font-size: 2.1rem;
+    color: var(--verylightgray);
+    letter-spacing: 1px;
+    padding: 20px auto;
+    text-transform: uppercase;
+}
+
+
+section p {
+    color: var(--transparentwhite);
+    font-size: 1.1rem;
+    font-family: var(--fontlexend);
+    margin: 20px auto;
+    line-height: 1.8rem;
+}
+
+section img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.sedan,
+.suv,
+.luxury {
+    width: 240px;
+    height: 300px;
+    padding: 35px;
+}
+
+section div button {
+    background-color: var(--verylightgray);
+    border: solid 1px var(--verylightgray);
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-family: var(--fontlexend);
+    padding: 10px 20px;
+    transition: .3s linear;
+    cursor: pointer;
+
+}
+
+section div button:hover {
+    background-color: transparent;
+    color: var(--verylightgray);
+    border: solid 1px var(--verylightgray);
+}
+
+.sedan {
+    background-color: var(--brightorange);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.sedan button {
+    color: var(--brightorange)
+}
+
+.suv {
+    background-color: var(--darkcyan);
+}
+
+.suv button {
+    color: var(--darkcyan);
+}
+
+.luxury {
+    background-color: var(--verydark);
+    /* display: none; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.luxury button {
+    color: var(--verydark);
+}
+
+
+/* FOOTER */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: none;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (min-width: 740px) {
+    section {
+        flex-direction: row;
+    }
+
+    .sedan,
+    .suv,
+    .luxury {
+        width: 240px;
+        height: 370px;
+        padding: 35px;
+    }
+
+    section p {
+        margin-bottom: 50px;
+    }
+
+    .sedan {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+
+    .luxury {
+        background-color: var(--verydark);
+        /* display: none; */
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+
+    section img {
+        margin-top: 15px;
+    }
+
+}
